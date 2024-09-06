@@ -42,4 +42,9 @@ public class CourseController {
         return ResponseEntity.ok(courseService.assignInstructorToCourse(courseId, instructorId));
     }
 
+    @DeleteMapping("/{courseId}/remove-instructor/{instructorId}")
+    public ResponseEntity<?> removeInstructorFromCourse(@PathVariable String courseId, @PathVariable String instructorId) {
+        return ResponseEntity.ok(courseService.removeInstructorFromCourse(courseId, instructorId));
+    }
+
 }
